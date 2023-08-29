@@ -68,7 +68,8 @@ llm_model_dict = {
         "name": "chatglm2-6b-int4",
         # "pretrained_model_name": "THUDM/chatglm2-6b-int4",
         "pretrained_model_name": "langchain-ChatGLM/chatglm2-6b-int4",
-        "local_model_path": None,
+        # "local_model_path": None,
+        "local_model_path": "langchain-ChatGLM/chatglm2-6b-int4",
         "provides": "ChatGLMLLMChain"
     },
     "chatglm2-6b-int8": {
