@@ -17,7 +17,7 @@ embedding_model_dict = {
     "ernie-base": "nghuyong/ernie-3.0-base-zh",
     "text2vec-base": "shibing624/text2vec-base-chinese",
     # "text2vec": "GanymedeNil/text2vec-large-chinese",
-    "text2vec": "kaggle/working/LLM/langchain-ChatGLM/text2vec",
+    "text2vec": "kaggle/working/text2vec",
     "m3e-small": "moka-ai/m3e-small",
     "m3e-base": "moka-ai/m3e-base",
 }
@@ -60,16 +60,16 @@ llm_model_dict = {
     },
     "chatglm2-6b": {
         "name": "chatglm2-6b",
-        "pretrained_model_name": "THUDM/chatglm2-6b",
-        "local_model_path": None,
+        # "pretrained_model_name": "THUDM/chatglm2-6b",
+        "pretrained_model_name": "kaggle/working/chatglm2-6b",
+        # "local_model_path": None,
+        "local_model_path": "kaggle/working/chatglm2-6b",
         "provides": "ChatGLMLLMChain"
     },
     "chatglm2-6b-int4": {
         "name": "chatglm2-6b-int4",
-        # "pretrained_model_name": "THUDM/chatglm2-6b-int4",
-        "pretrained_model_name": "kaggle/working/LLM/langchain-ChatGLM/chatglm2-6b-int4",
-        # "local_model_path": None,
-        "local_model_path": "kaggle/working/LLM/langchain-ChatGLM/chatglm2-6b-int4",
+        "pretrained_model_name": "THUDM/chatglm2-6b-int4",
+        "local_model_path": None,
         "provides": "ChatGLMLLMChain"
     },
     "chatglm2-6b-int8": {
@@ -206,8 +206,7 @@ llm_model_dict = {
 }
 
 # LLM 名称
-# LLM_MODEL = "chatglm-6b"
-LLM_MODEL = "chatglm2-6b-int4"
+LLM_MODEL = "chatglm2-6b"
 # 量化加载8bit 模型
 LOAD_IN_8BIT = False
 # Load the model with bfloat16 precision. Requires NVIDIA Ampere GPU.
